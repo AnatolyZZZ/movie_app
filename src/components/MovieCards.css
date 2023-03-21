@@ -1,0 +1,16 @@
+.filmCard {
+    display: inline-block;
+    background-color: rgb(62, 58, 58);
+    padding: 10px;
+    text-align: center;
+}
+
+.filmCard img {
+    width: 150px;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
