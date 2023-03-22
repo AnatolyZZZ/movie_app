@@ -8,7 +8,7 @@ export const searchMovie = (str) => {
 }
 
 export const fetchMovies = (srch) => (dispatch) => {
-    fetch(`http://www.omdbapi.com/?apikey=4f40cd1b&s=${srch}`)
+    fetch(`https://www.omdbapi.com/?apikey=4f40cd1b&s=${srch}`)
     .then (res => res.json())
     .then (data => {
         console.log(data.Response)
@@ -34,7 +34,7 @@ export const fetchMovie = (key) => (dispatch) => {
         
         // loading(true)
     // console.log(`http://www.omdbapi.com/?apikey=4f40cd1b&i=${key}`)
-    fetch(`http://www.omdbapi.com/?apikey=4f40cd1b&i=${key}&plot=full`)
+    fetch(`https://www.omdbapi.com/?apikey=4f40cd1b&i=${key}&plot=full`)
     .then (res => res.json())
     .then (data => {
         dispatch({
