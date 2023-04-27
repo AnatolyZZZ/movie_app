@@ -30,3 +30,11 @@
     border: 1px solid gray;
     
 }
+.loading {
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: center;
+}
+.loading h1 {
+    margin: 2rem 0 3rem 0;
+}

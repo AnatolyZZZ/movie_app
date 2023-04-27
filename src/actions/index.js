@@ -8,6 +8,7 @@ export const searchMovie = (str) => {
 }
 
 export const fetchMovies = (srch) => (dispatch) => {
+    dispatch({type: LOADING})
     fetch(`https://www.omdbapi.com/?apikey=4f40cd1b&s=${srch}`)
     .then (res => res.json())
     .then (data => {

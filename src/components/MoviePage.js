@@ -19,7 +19,7 @@ export const MoviePage = (props) => {
     // console.log(load);
     // console.log(film);
     return(<> { 
-    load ? <><h1>Loading...</h1><img src={loading_}/></> :
+    load ? <div className="loading"><h1>Loading...</h1><img src={loading_}/></div> :
             <div className='Film'>
                 <div className='MainInfo'>
                     <div className='imageDiv'>
@@ -42,7 +42,7 @@ export const MoviePage = (props) => {
                 <div className='About'>
                     <p className='about'>About</p>
                     <p>{film.Plot}</p>
-                    <h2><Link to="/">Back to search</Link></h2>
+                    <h4><Link to="/">Back to search</Link></h4>
                 </div>
             </div>
     }

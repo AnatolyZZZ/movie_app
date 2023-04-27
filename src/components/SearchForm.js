@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import {searchMovie, fetchMovies} from '../actions'
+import './SearchForm.css'
 
 const SearchForm = (props) => {
     const handleChange = (e) => {
@@ -11,9 +12,14 @@ const SearchForm = (props) => {
     }
     // console.log(props.searchResult)
     return (
-        <form onSubmit={handleSubmit}>
-            <input type="text" placeholder="name" onChange={handleChange}/>
-            <button type="submit">Search</button>
+        <form onSubmit={handleSubmit} id='searchform'>
+            <input type="text" placeholder="film name" onChange={(e) => {
+                props.fetchMovies(e.target.value);
+                handleChange(e);
+                }}
+            value = {props.searchText}
+            />
+            {/* <button type="submit">Search</button> */}
         </form>
     )
 }

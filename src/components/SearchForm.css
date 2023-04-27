@@ -1,0 +1,9 @@
+#searchform {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+#searchform > input {
+    width: 100%;
+    font-size: 1.5rem;
+}

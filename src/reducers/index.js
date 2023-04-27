@@ -11,7 +11,7 @@ export const reducer = (state = initialState, action = {}) => {
         case SEARCH_MOVIE :
             return {...state, text : action.payload}
         case FETCH_MOVIES :
-            return {...state, movies : action.payload}
+            return {...state, movies : action.payload, loading:false}
         case FETCH_MOVIE :
             return {...state, movie : action.payload, loading:false}
         case LOADING :  
