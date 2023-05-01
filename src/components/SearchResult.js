@@ -13,7 +13,7 @@ export const SearchResult = () => {
     ? <h1>Please enter something in search field</h1> 
     : 
     load 
-    ? <div className='loading'><h1>Loading...</h1><img src={loading_}/></div> 
+    ? <div className='loading'><h1>Loading...</h1><img src={loading_} alt="loading"/></div> 
     :
         (films.length === 0) 
         ? <h1>Nothing found</h1> 
