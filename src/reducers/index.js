@@ -1,9 +1,10 @@
-import {SEARCH_MOVIE, FETCH_MOVIES, FETCH_MOVIE ,LOADING} from '../actions'
+import {SEARCH_MOVIE, FETCH_MOVIES, FETCH_MOVIE ,LOADING, FAV} from '../actions'
 const initialState = {
     text: '',
     movies: [],
     loading: true,
-    movie: {}
+    movie: {},
+    favorites: []
 }
 
 export const reducer = (state = initialState, action = {}) => {
@@ -16,6 +17,8 @@ export const reducer = (state = initialState, action = {}) => {
             return {...state, movie : action.payload, loading:false}
         case LOADING :  
             return {...state, loading : true}
+        case FAV :
+            return {...state, favorites : action.payload}
         default :
             return {...state}
 

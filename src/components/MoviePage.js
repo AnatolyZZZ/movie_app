@@ -1,9 +1,10 @@
 import {useEffect} from 'react'
-import { fetchMovie, loading} from '../actions'
+import { fetchMovie } from '../actions'
 import { useDispatch, useSelector } from 'react-redux'
 import {useParams, Link} from 'react-router-dom'
 import "./FilmPage.css"
 import loading_ from '../images/loading.gif'
+import {FavBtn} from './FavBtn'
 
 export const MoviePage = (props) => {
     let {id} = useParams()
@@ -19,15 +20,16 @@ export const MoviePage = (props) => {
     // console.log(load);
     // console.log(film);
     return(<> { 
-    load ? <div className="loading"><h1>Loading...</h1><img src={loading_}/></div> :
+    load ? <div className="loading"><h1>Loading...</h1><img src={loading_} alt='loading'/></div> :
             <div className='Film'>
                 <div className='MainInfo'>
                     <div className='imageDiv'>
-                        <img src={film.Poster}/>
+                        <img src={film.Poster} alt='no poster available'/>
+                        {/* <FavBtn film={film}/> */}
                     </div>
                    
                     <div className='Info'>
-                        <h1>{film.Title}</h1>
+                        <h1><FavBtn film={film}/>  {film.Title}</h1>
                         <div className='Short'>
                             <div><span style={{fontWeight : "bold"}}>Genre:</span> {film.Genre}</div>
                             <div><span style={{fontWeight : "bold"}}>Released:</span> {film.Released}</div>
@@ -43,6 +45,7 @@ export const MoviePage = (props) => {
                     <p className='about'>About</p>
                     <p>{film.Plot}</p>
                     <h4><Link to="/">Back to search</Link></h4>
+                    <h4><Link to="/fav">Favorite films</Link></h4>
                 </div>
             </div>
     }

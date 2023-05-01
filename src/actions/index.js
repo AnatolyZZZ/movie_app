@@ -1,5 +1,5 @@
-const SEARCH_MOVIE='SEARCH_MOVIE', FETCH_MOVIES='FETCH_MOVIES', FETCH_MOVIE='FETCH_MOVIE' ,LOADING='LOADING'
-export {SEARCH_MOVIE, FETCH_MOVIES, FETCH_MOVIE ,LOADING}
+const SEARCH_MOVIE='SEARCH_MOVIE', FETCH_MOVIES='FETCH_MOVIES', FETCH_MOVIE='FETCH_MOVIE' ,LOADING='LOADING', FAV='FAVORITES'
+export {SEARCH_MOVIE, FETCH_MOVIES, FETCH_MOVIE ,LOADING, FAV}
 export const searchMovie = (str) => {
     return {
         type : SEARCH_MOVIE,
@@ -53,5 +53,12 @@ export const loading = (val) => {
     return {
         type : LOADING,
         payload : val
+    }
+}
+
+export const setFavorites = (arr) => {
+    return {
+        type : FAV,
+        payload : arr
     }
 }
