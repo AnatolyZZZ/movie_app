@@ -5,7 +5,8 @@ import { MoviePage } from './components/MoviePage';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { setFavorites } from './actions';
-import {Favorites} from './components/Favorites'
+import {Favorites} from './components/Favorites';
+import { Header } from './components/Header';
 
 function App() {
   const dispatch = useDispatch();
@@ -19,6 +20,7 @@ function App() {
   },[])
   return (
     <div className="App">
+      <Header/>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/:id' element={<MoviePage/>}/>

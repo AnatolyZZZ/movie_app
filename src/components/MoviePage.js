@@ -44,8 +44,8 @@ export const MoviePage = (props) => {
                 <div className='About'>
                     <p className='about'>About</p>
                     <p>{film.Plot}</p>
-                    <h4><Link to="/">Back to search</Link></h4>
-                    <h4><Link to="/fav">Favorite films</Link></h4>
+                    {/* <h4><Link to="/">Back to search</Link></h4>
+                    <h4><Link to="/fav">Favorite films</Link></h4> */}
                 </div>
             </div>
     }

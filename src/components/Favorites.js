@@ -20,6 +20,6 @@ export const Favorites = () => {
     return <>
     {favFilms.length === 0 ? <h1>No favorite films added</h1> : <h1>Your favorite films</h1>}
     <MovieContainer films={favFilms}/>
-    <h4><Link to="/">Back to search</Link></h4>
+    {/* <h4><Link to="/">Back to search</Link></h4> */}
     </>
 }

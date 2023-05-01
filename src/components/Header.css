@@ -1,0 +1,21 @@
+header {
+    padding: 1em 0;
+    background-color: rgb(62, 58, 58);
+    margin-bottom: 2em;
+}
+header a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+.header-container {
+    width : 80%;
+    max-width: 750px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+}
+.now {
+    cursor : default;
+    text-decoration: underline;
+}
