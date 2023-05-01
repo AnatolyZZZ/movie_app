@@ -1,8 +1,8 @@
 import SearchForm from './SearchForm';
-import {MovieContainer} from './MovieContainer';
+import { SearchResult } from './SearchResult';
 export const Home = () => {
     return (<>
       <SearchForm/>
-      <MovieContainer/>
+      <SearchResult/>
     </>)
 }

@@ -3,6 +3,8 @@
     background-color: rgb(62, 58, 58);
     padding: 10px;
     text-align: center;
+    position: relative;
+    color: white;
 }
 .filmCard > h2 {
     color: white;
@@ -13,6 +15,7 @@
 .filmCard button {
     padding: 0.5em 2em;
     border: 0;
+    color: black;
 }
 
 .list {
