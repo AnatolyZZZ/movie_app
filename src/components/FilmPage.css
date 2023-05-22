@@ -1,30 +1,30 @@
 .Film {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 1000px;
+    width: 80%;
+    margin: 0 auto;
 }
 .imageDiv {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 10px;
+    
 }
 .MainInfo {
     display:  flex;
-    width: 80vw;
-    
+    flex-direction: column;
+    gap: 1.5em;
+    padding-top: 1em;
 }
 .Short div  {
-    padding: 20px 0px; 
+    padding: 1em; 
 }
 
 .Short {
     padding: 0px;
 }
-.About {
-    padding: 0 30px;
-    width: 80vw;
+.About p:first-child{
+    font-weight: bold;
 }
 .Info div {
     border: 1px solid gray;
@@ -37,4 +37,11 @@
 }
 .loading h1 {
     margin: 2rem 0 3rem 0;
+}
+
+@media screen and (min-width: 700px){
+    .MainInfo {
+        flex-direction: row;
+    }
+    
 }

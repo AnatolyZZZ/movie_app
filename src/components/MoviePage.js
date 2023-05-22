@@ -22,14 +22,10 @@ export const MoviePage = (props) => {
     return(<> { 
     load ? <div className="loading"><h1>Loading...</h1><img src={loading_} alt='loading'/></div> :
             <div className='Film'>
+                 <h1><FavBtn film={film}/>  {film.Title}</h1>
                 <div className='MainInfo'>
-                    <div className='imageDiv'>
-                        <img src={film.Poster} alt='no poster available'/>
-                        {/* <FavBtn film={film}/> */}
-                    </div>
-                   
                     <div className='Info'>
-                        <h1><FavBtn film={film}/>  {film.Title}</h1>
+                       
                         <div className='Short'>
                             <div><span style={{fontWeight : "bold"}}>Genre:</span> {film.Genre}</div>
                             <div><span style={{fontWeight : "bold"}}>Released:</span> {film.Released}</div>
@@ -39,6 +35,11 @@ export const MoviePage = (props) => {
                             <div><span style={{fontWeight : "bold"}}>Writer:</span> {film.Writer}</div>
                             <div><span style={{fontWeight : "bold"}}>Actors:</span> {film.Actors}</div>
                         </div>
+                    </div>
+
+                    <div className='imageDiv'>
+                        <img src={film.Poster} alt='no poster available'/>
+                        {/* <FavBtn film={film}/> */}
                     </div>
                 </div>
                 <div className='About'>
