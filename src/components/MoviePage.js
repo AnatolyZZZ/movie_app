@@ -8,7 +8,7 @@ import {FavBtn} from './FavBtn'
 
 export const MoviePage = (props) => {
     let {id} = useParams()
-
+    
     const film = useSelector(state => state.movie);
     const load = useSelector (state => state.loading)
     const dispatch = useDispatch();
@@ -24,8 +24,12 @@ export const MoviePage = (props) => {
             <div className='Film'>
                  <h1><FavBtn film={film}/>  {film.Title}</h1>
                 <div className='MainInfo'>
+                    <div className='imageDiv'>
+                        <img src={film.Poster} alt='no poster available'/>
+                        {/* <FavBtn film={film}/> */}
+                    </div>
+
                     <div className='Info'>
-                       
                         <div className='Short'>
                             <div><span style={{fontWeight : "bold"}}>Genre:</span> {film.Genre}</div>
                             <div><span style={{fontWeight : "bold"}}>Released:</span> {film.Released}</div>
@@ -37,10 +41,7 @@ export const MoviePage = (props) => {
                         </div>
                     </div>
 
-                    <div className='imageDiv'>
-                        <img src={film.Poster} alt='no poster available'/>
-                        {/* <FavBtn film={film}/> */}
-                    </div>
+                    
                 </div>
                 <div className='About'>
                     <p className='about'>About</p>

@@ -13,7 +13,7 @@ const SearchForm = (props) => {
     // console.log(props.searchResult)
     return (
         <form onSubmit={handleSubmit} id='searchform'>
-            <input type="text" placeholder="film name" onChange={(e) => {
+            <input type="text" placeholder="Enter film name" onChange={(e) => {
                 props.fetchMovies(e.target.value);
                 handleChange(e);
                 }}

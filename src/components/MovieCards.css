@@ -9,11 +9,11 @@
     min-height: 300px;
 }
 .mainContent {
-    height: 85%;
+    height: 80%;
     padding-bottom: 1em;
 }
-.filmCard > h2 {
-    color: white;
+.mainContent > h2 {
+    margin-top: 1.8em;
 }
 .filmCard img {
     width: 150px;

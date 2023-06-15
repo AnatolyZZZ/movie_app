@@ -5,7 +5,7 @@ import './Header.css'
 export const Header = (props) => {
     const location = useLocation();
     let url = location.pathname;
-    useEffect(()=> {console.log(url)}, [url])
+
     return <header>
                 <div className="header-container">
                     {url === '/' ? <Link to="/" className="now">Search</Link> : <Link to="/">Search</Link>}

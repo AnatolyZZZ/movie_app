@@ -8,7 +8,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+}
+.Info {
+    width: 100%;
 }
 .MainInfo {
     display:  flex;

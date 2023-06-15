@@ -12,14 +12,13 @@ export const fetchMovies = (srch) => (dispatch) => {
     fetch(`https://www.omdbapi.com/?apikey=4f40cd1b&s=${srch}`)
     .then (res => res.json())
     .then (data => {
-        console.log(data.Response)
-        if (data.Response == "True") {
+        if (data.Response === "True") {
             dispatch({
                 type : FETCH_MOVIES,
                 payload : data.Search
             })
         } else {
-            console.log("dispatching false")
+            // console.log("dispatching false")
             dispatch({
                 type : FETCH_MOVIES,
                 payload : []
